@@ -4,6 +4,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Hero3D } from "./hero-3d";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const DynamicHero3D = dynamic(() => import("./hero-3d").then((mod) => mod.Hero3D), {
+  ssr: false,
+});
+
 
 export function Hero() {
   const containerVariants = {
@@ -67,7 +74,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <Hero3D />
+            <DynamicHero3D />
           </motion.div>
         </motion.div>
       </div>
