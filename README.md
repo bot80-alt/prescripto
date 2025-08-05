@@ -1,5 +1,6 @@
-# Firebase Studio
+**Prescripto - Prescriptions on Blockchain**
 
-This is a NextJS starter in Firebase Studio.
+# This Project is Developer for Avalanche Team1 Web3 Hackathon at MCC Innovation Park, Chennai.
 
-To get started, take a look at src/app/page.tsx.
+
+
