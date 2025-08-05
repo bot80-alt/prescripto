@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section id="home" className="relative py-20 md:py-32 bg-card">
+    <section id="home" className="relative py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-3xl text-center mx-auto">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-headline">
@@ -14,7 +14,7 @@ export function Hero() {
             A seamless and secure system for verified pharmacies, hospitals, and patients.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Link href="#onboarding">Get Started</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
@@ -29,10 +29,10 @@ export function Hero() {
           alt="Abstract background"
           layout="fill"
           objectFit="cover"
-          className="opacity-10"
+          className="opacity-5"
           data-ai-hint="abstract geometric"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-card via-card to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/80"></div>
       </div>
     </section>
   );

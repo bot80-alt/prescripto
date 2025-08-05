@@ -18,7 +18,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="#home" className="flex items-center space-x-2">
           <Logo className="h-6 w-6 text-primary" />
@@ -35,6 +35,11 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        <div className="hidden md:flex">
+          <Button asChild>
+            <Link href="/login">Login</Link>
+          </Button>
+        </div>
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -61,6 +66,9 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
+                <Button asChild>
+                  <Link href="/login" onClick={() => setIsOpen(false)}>Login</Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

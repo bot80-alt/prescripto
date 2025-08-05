@@ -26,7 +26,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-12 sm:py-24 bg-secondary">
+    <section id="features" className="py-12 sm:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Choose RxChain?</h2>
@@ -36,12 +36,12 @@ export function Features() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature) => (
-            <Card key={feature.title} className="text-center flex flex-col items-center p-6 border-2 hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-lg">
+            <Card key={feature.title} className="text-center flex flex-col items-center p-6 border-2 border-transparent hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-lg bg-secondary">
               <CardHeader className="p-0 mb-4">
                 {feature.icon}
               </CardHeader>
               <CardTitle className="mb-2 text-xl font-headline">{feature.title}</CardTitle>
-              <CardDescription>{feature.description}</CardDescription>
+              <CardDescription className="text-muted-foreground">{feature.description}</CardDescription>
             </Card>
           ))}
         </div>
